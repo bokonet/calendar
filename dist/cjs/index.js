@@ -5228,7 +5228,7 @@ function createCalendar(props, { slots, emit }) {
     );
   };
   const refreshFocusable = (day) => {
-    day.isFocusable = day.inMonth && day.day === focusableDay.value;
+    day.isFocusable = day.inMonth;
   };
   const forDays = (pages, fn) => {
     for (const page of pages) {

@@ -245,7 +245,7 @@ export function createCalendar(
   };
 
   const refreshFocusable = (day: CalendarDay) => {
-    day.isFocusable = day.inMonth && day.day === focusableDay.value;
+    day.isFocusable = day.inMonth;
   };
 
   const forDays = (pages: Page[], fn: (day: CalendarDay) => boolean | void) => {
