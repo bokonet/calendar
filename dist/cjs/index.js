@@ -6804,12 +6804,7 @@ const _sfc_main$7 = vue.defineComponent({
       ];
     });
     const dayContentProps = vue.computed(() => {
-      let tabindex;
-      if (day.value.isFocusable) {
-        tabindex = "0";
-      } else {
-        tabindex = "-1";
-      }
+      const tabindex = "0";
       const classes = [
         "vc-day-content vc-focusable vc-focus vc-attr",
         { "vc-disabled": day.value.isDisabled },
