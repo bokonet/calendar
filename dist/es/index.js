@@ -6802,7 +6802,7 @@ const _sfc_main$7 = defineComponent({
       ];
     });
     const dayContentProps = computed(() => {
-      const tabindex = "0";
+      const tabindex = props.day.inMonth ? "0" : "-1";
       const classes = [
         "vc-day-content vc-focusable vc-focus vc-attr",
         { "vc-disabled": day.value.isDisabled },
