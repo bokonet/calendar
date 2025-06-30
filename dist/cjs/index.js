@@ -6819,8 +6819,7 @@ const _sfc_main$7 = vue.defineComponent({
         class: classes,
         style,
         tabindex,
-        "aria-label": "XXX",
-        //day.value.ariaLabel,
+        "aria-label": day.value.ariaLabel,
         "aria-hidden": !day.value.inMonth,
         "aria-disabled": day.value.isDisabled,
         role: "button"
