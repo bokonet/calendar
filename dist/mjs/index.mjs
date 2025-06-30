@@ -5500,11 +5500,11 @@ function createCalendar(props, { slots, emit }) {
         break;
       }
       case "ArrowUp": {
-        newDate = addDays(date, -7);
+        newDate = addDays(date, -6);
         break;
       }
       case "ArrowDown": {
-        newDate = addDays(date, 7);
+        newDate = addDays(date, 6);
         break;
       }
       case "Home": {
