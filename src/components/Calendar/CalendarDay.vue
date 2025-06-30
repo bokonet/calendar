@@ -161,7 +161,7 @@ export default defineComponent({
 
     const dayContentProps = computed(() => {
       const tabindex = props.day.inMonth && !day.value.isDisabled ? '0' : '-1';
-      
+
       const classes = [
         'vc-day-content vc-focusable vc-focus vc-attr',
         { 'vc-disabled': day.value.isDisabled },
@@ -177,7 +177,8 @@ export default defineComponent({
         style,
         tabindex,
         'aria-label': day.value.ariaLabel,
-        'aria-disabled': day.value.isDisabled ? true : false,
+        'aria-hidden': !day.value.inMonth,
+        'aria-disabled': day.value.isDisabled,
         role: 'button',
       };
     });
