@@ -6818,8 +6818,7 @@ const _sfc_main$7 = defineComponent({
         style,
         tabindex,
         "aria-label": day.value.ariaLabel,
-        "aria-hidden": !day.value.inMonth,
-        "aria-disabled": day.value.isDisabled
+        "aria-hidden": !day.value.inMonth
       };
     });
     const dayContentEvents = computed(() => {
