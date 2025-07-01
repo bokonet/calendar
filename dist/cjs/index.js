@@ -6821,8 +6821,7 @@ const _sfc_main$7 = vue.defineComponent({
         tabindex,
         "aria-label": day.value.ariaLabel,
         "aria-hidden": !day.value.inMonth,
-        "aria-disabled": day.value.isDisabled,
-        role: "button"
+        "aria-disabled": day.value.isDisabled
       };
     });
     const dayContentEvents = vue.computed(() => {
@@ -6921,7 +6920,7 @@ function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
       locale: _ctx.locale
     }, {
       default: vue.withCtx(() => [
-        vue.withDirectives((vue.openBlock(), vue.createElementBlock("div", vue.mergeProps(_ctx.dayContentProps, vue.toHandlers(_ctx.dayContentEvents, true)), [
+        vue.withDirectives((vue.openBlock(), vue.createElementBlock("button", vue.mergeProps(_ctx.dayContentProps, vue.toHandlers(_ctx.dayContentEvents, true)), [
           vue.createTextVNode(vue.toDisplayString(_ctx.day.label), 1)
         ], 16)), [
           [_directive_popover, _ctx.dayPopover]

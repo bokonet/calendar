@@ -6819,8 +6819,7 @@ const _sfc_main$7 = defineComponent({
         tabindex,
         "aria-label": day.value.ariaLabel,
         "aria-hidden": !day.value.inMonth,
-        "aria-disabled": day.value.isDisabled,
-        role: "button"
+        "aria-disabled": day.value.isDisabled
       };
     });
     const dayContentEvents = computed(() => {
@@ -6919,7 +6918,7 @@ function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
       locale: _ctx.locale
     }, {
       default: withCtx(() => [
-        withDirectives((openBlock(), createElementBlock("div", mergeProps(_ctx.dayContentProps, toHandlers(_ctx.dayContentEvents, true)), [
+        withDirectives((openBlock(), createElementBlock("button", mergeProps(_ctx.dayContentProps, toHandlers(_ctx.dayContentEvents, true)), [
           createTextVNode(toDisplayString(_ctx.day.label), 1)
         ], 16)), [
           [_directive_popover, _ctx.dayPopover]

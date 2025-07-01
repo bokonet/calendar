@@ -20,13 +20,13 @@
       :dayEvents="dayContentEvents"
       :locale="locale"
     >
-      <div
+      <button
         v-bind="dayContentProps"
         v-on="dayContentEvents"
         v-popover="dayPopover"
-      >
+      >    
         {{ day.label }}
-      </div>
+      </button>
     </CalendarSlot>
     <!--Dots-->
     <div v-if="hasDots" class="vc-day-layer vc-day-box-center-bottom">
@@ -179,7 +179,6 @@ export default defineComponent({
         'aria-label': day.value.ariaLabel,
         'aria-hidden': !day.value.inMonth,
         'aria-disabled': day.value.isDisabled,
-        role: 'button',
       };
     });
 
