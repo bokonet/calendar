@@ -6024,7 +6024,7 @@ const _hoisted_2$b = {
   key: 0,
   class: "vc-day-popover-row-indicator"
 };
-const _hoisted_3$9 = { class: "vc-day-popover-row-label" };
+const _hoisted_3$a = { class: "vc-day-popover-row-label" };
 const _sfc_main$j = /* @__PURE__ */ defineComponent({
   __name: "PopoverRow",
   props: {
@@ -6065,7 +6065,7 @@ const _sfc_main$j = /* @__PURE__ */ defineComponent({
             class: normalizeClass(unref(indicator).class)
           }, null, 2)
         ])) : createCommentVNode("", true),
-        createElementVNode("div", _hoisted_3$9, [
+        createElementVNode("div", _hoisted_3$a, [
           renderSlot(_ctx.$slots, "default", {}, () => [
             createTextVNode(toDisplayString(__props.attribute.popover ? __props.attribute.popover.label : "No content provided"), 1)
           ])
@@ -6148,11 +6148,11 @@ const _hoisted_1$a = {
   viewBox: "0 0 24 24"
 };
 const _hoisted_2$9 = /* @__PURE__ */ createElementVNode("polyline", { points: "9 18 15 12 9 6" }, null, -1);
-const _hoisted_3$8 = [
+const _hoisted_3$9 = [
   _hoisted_2$9
 ];
 function _sfc_render$6(_ctx, _cache) {
-  return openBlock(), createElementBlock("svg", _hoisted_1$a, _hoisted_3$8);
+  return openBlock(), createElementBlock("svg", _hoisted_1$a, _hoisted_3$9);
 }
 const IconChevronRight = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$6]]);
 const _sfc_main$f = {};
@@ -6162,11 +6162,11 @@ const _hoisted_1$9 = {
   viewBox: "0 0 24 24"
 };
 const _hoisted_2$8 = /* @__PURE__ */ createElementVNode("polyline", { points: "15 18 9 12 15 6" }, null, -1);
-const _hoisted_3$7 = [
+const _hoisted_3$8 = [
   _hoisted_2$8
 ];
 function _sfc_render$5(_ctx, _cache) {
-  return openBlock(), createElementBlock("svg", _hoisted_1$9, _hoisted_3$7);
+  return openBlock(), createElementBlock("svg", _hoisted_1$9, _hoisted_3$8);
 }
 const IconChevronLeft = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$5]]);
 const _sfc_main$e = {};
@@ -6176,11 +6176,11 @@ const _hoisted_1$8 = {
   viewBox: "0 0 24 24"
 };
 const _hoisted_2$7 = /* @__PURE__ */ createElementVNode("polyline", { points: "6 9 12 15 18 9" }, null, -1);
-const _hoisted_3$6 = [
+const _hoisted_3$7 = [
   _hoisted_2$7
 ];
 function _sfc_render$4(_ctx, _cache) {
-  return openBlock(), createElementBlock("svg", _hoisted_1$8, _hoisted_3$6);
+  return openBlock(), createElementBlock("svg", _hoisted_1$8, _hoisted_3$7);
 }
 const IconChevronDown = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$4]]);
 const _sfc_main$d = {};
@@ -6192,11 +6192,11 @@ const _hoisted_1$7 = {
   viewBox: "0 0 24 24"
 };
 const _hoisted_2$6 = /* @__PURE__ */ createElementVNode("path", { d: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" }, null, -1);
-const _hoisted_3$5 = [
+const _hoisted_3$6 = [
   _hoisted_2$6
 ];
 function _sfc_render$3(_ctx, _cache) {
-  return openBlock(), createElementBlock("svg", _hoisted_1$7, _hoisted_3$5);
+  return openBlock(), createElementBlock("svg", _hoisted_1$7, _hoisted_3$6);
 }
 const IconClock = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$3]]);
 const icons = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
@@ -6235,7 +6235,7 @@ const _hoisted_2$5 = {
   key: 1,
   class: "vc-title-wrapper"
 };
-const _hoisted_3$4 = {
+const _hoisted_3$5 = {
   type: "button",
   class: "vc-title"
 };
@@ -6351,7 +6351,7 @@ const _sfc_main$b = /* @__PURE__ */ defineComponent({
         unref(show).title ? (openBlock(), createElementBlock("div", _hoisted_2$5, [
           createVNode(_sfc_main$i, { name: "header-title-wrapper" }, {
             default: withCtx(() => [
-              withDirectives((openBlock(), createElementBlock("button", _hoisted_3$4, [
+              withDirectives((openBlock(), createElementBlock("button", _hoisted_3$5, [
                 createVNode(_sfc_main$i, {
                   name: "header-title",
                   title: __props.page.title
@@ -6455,7 +6455,7 @@ function usePage() {
 }
 const _hoisted_1$5 = { class: "vc-nav-header" };
 const _hoisted_2$4 = ["disabled"];
-const _hoisted_3$3 = ["disabled"];
+const _hoisted_3$4 = ["disabled"];
 const _hoisted_4$2 = { class: "vc-nav-items" };
 const _hoisted_5$2 = ["data-id", "aria-label", "disabled", "onClick", "onKeydown"];
 const _sfc_main$a = /* @__PURE__ */ defineComponent({
@@ -6653,7 +6653,7 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
               ]),
               _: 1
             }, 8, ["disabled"])
-          ], 40, _hoisted_3$3)
+          ], 40, _hoisted_3$4)
         ]),
         createElementVNode("div", _hoisted_4$2, [
           (openBlock(true), createElementBlock(Fragment, null, renderList(unref(activeItems), (item) => {
@@ -6882,7 +6882,7 @@ const _hoisted_2$3 = {
   key: 1,
   class: "vc-day-layer vc-day-box-center-bottom"
 };
-const _hoisted_3$2 = { class: "vc-dots" };
+const _hoisted_3$3 = { class: "vc-dots" };
 const _hoisted_4$1 = {
   key: 2,
   class: "vc-day-layer vc-day-box-center-bottom"
@@ -6926,7 +6926,7 @@ function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
       _: 1
     }, 8, ["day", "attributes", "attribute-cells", "dayProps", "dayEvents", "locale"]),
     _ctx.hasDots ? (openBlock(), createElementBlock("div", _hoisted_2$3, [
-      createElementVNode("div", _hoisted_3$2, [
+      createElementVNode("div", _hoisted_3$3, [
         (openBlock(true), createElementBlock(Fragment, null, renderList(_ctx.dots, ({ key, class: bgClass, style }) => {
           return openBlock(), createElementBlock("span", {
             key,
@@ -6951,7 +6951,8 @@ function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
 }
 const CalendarDay = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$2]]);
 const _hoisted_1$3 = { class: "vc-weekdays" };
-const _hoisted_2$2 = ["onClick"];
+const _hoisted_2$2 = ["aria-rowindex"];
+const _hoisted_3$2 = ["onClick"];
 const __default__$2 = {
   inheritAttrs: false
 };
@@ -6990,10 +6991,11 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
               }, toDisplayString(label), 3);
             }), 128))
           ]),
-          (openBlock(true), createElementBlock(Fragment, null, renderList(unref(page).viewWeeks, (week) => {
+          (openBlock(true), createElementBlock(Fragment, null, renderList(unref(page).viewWeeks, (week, i) => {
             return openBlock(), createElementBlock("div", {
               key: `weeknumber-${week.weeknumber}`,
-              class: "vc-week"
+              class: "vc-week",
+              "aria-rowindex": i
             }, [
               unref(page).weeknumberPosition ? (openBlock(), createElementBlock("div", {
                 key: 0,
@@ -7002,15 +7004,17 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
                 createElementVNode("span", {
                   class: normalizeClass(["vc-weeknumber-content"]),
                   onClick: ($event) => unref(onWeeknumberClick)(week, $event)
-                }, toDisplayString(week.weeknumberDisplay), 9, _hoisted_2$2)
+                }, toDisplayString(week.weeknumberDisplay), 9, _hoisted_3$2)
               ], 2)) : createCommentVNode("", true),
-              (openBlock(true), createElementBlock(Fragment, null, renderList(week.days, (day) => {
+              (openBlock(true), createElementBlock(Fragment, null, renderList(week.days, (day, j) => {
                 return openBlock(), createBlock(CalendarDay, {
                   key: day.id,
-                  day
-                }, null, 8, ["day"]);
+                  day,
+                  "aria-colindex": j,
+                  role: "gridcell"
+                }, null, 8, ["day", "aria-colindex"]);
               }), 128))
-            ]);
+            ], 8, _hoisted_2$2);
           }), 128))
         ], 2)
       ], 2);
