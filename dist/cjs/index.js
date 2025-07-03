@@ -6997,7 +6997,7 @@ const _sfc_main$6 = /* @__PURE__ */ vue.defineComponent({
             return vue.openBlock(), vue.createElementBlock("div", {
               key: `weeknumber-${week.weeknumber}`,
               class: "vc-week",
-              "aria-rowindex": i
+              "aria-rowindex": i + 1
             }, [
               vue.unref(page).weeknumberPosition ? (vue.openBlock(), vue.createElementBlock("div", {
                 key: 0,
@@ -7012,7 +7012,7 @@ const _sfc_main$6 = /* @__PURE__ */ vue.defineComponent({
                 return vue.openBlock(), vue.createBlock(CalendarDay, {
                   key: day.id,
                   day,
-                  "aria-colindex": j,
+                  "aria-colindex": j + 1,
                   role: "gridcell"
                 }, null, 8, ["day", "aria-colindex"]);
               }), 128))
