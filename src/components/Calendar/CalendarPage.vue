@@ -32,7 +32,7 @@
         v-for="(week, i) in page.viewWeeks"
         :key="`weeknumber-${week.weeknumber}`"
         class="vc-week"
-        :aria-rowindex="i"
+        :aria-rowindex="i + 1"
       >
         <!--Weeknumber-->
         <div
@@ -46,7 +46,7 @@
           >
         </div>
         <!--Week days-->
-        <CalendarDay v-for="(day, j) in week.days" :key="day.id" :day="day" :aria-colindex="j" role="gridcell" />
+        <CalendarDay v-for="(day, j) in week.days" :key="day.id" :day="day" :aria-colindex="j + 1" role="gridcell" />
       </div>
     </div>
   </div>
