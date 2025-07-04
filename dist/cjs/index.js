@@ -6998,7 +6998,7 @@ const _sfc_main$6 = /* @__PURE__ */ vue.defineComponent({
             return vue.openBlock(), vue.createElementBlock("div", {
               key: `weeknumber-${week.weeknumber}`,
               class: "vc-week",
-              "aria-role": "row",
+              role: "row",
               "aria-rowindex": i + 1
             }, [
               vue.unref(page).weeknumberPosition ? (vue.openBlock(), vue.createElementBlock("div", {

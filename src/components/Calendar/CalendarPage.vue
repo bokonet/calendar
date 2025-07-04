@@ -33,7 +33,7 @@
         v-for="(week, i) in page.viewWeeks"
         :key="`weeknumber-${week.weeknumber}`"
         class="vc-week"
-        aria-role="row"
+        role="row"
         :aria-rowindex="i + 1"
       >
         <!--Weeknumber-->
