@@ -6996,6 +6996,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
             return openBlock(), createElementBlock("div", {
               key: `weeknumber-${week.weeknumber}`,
               class: "vc-week",
+              "aria-role": "row",
               "aria-rowindex": i + 1
             }, [
               unref(page).weeknumberPosition ? (openBlock(), createElementBlock("div", {
