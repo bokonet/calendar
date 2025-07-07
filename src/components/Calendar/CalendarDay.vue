@@ -1,5 +1,5 @@
 <template>
-  <div :class="dayClasses">
+  <div :class="dayClasses" :aria-hidden="!day.inMonth">
     <!--Highlights-->
     <div v-if="hasHighlights" class="vc-highlights vc-day-layer">
       <div

@@ -6877,27 +6877,29 @@ const _sfc_main$7 = vue.defineComponent({
   }
 });
 const CalendarDay_vue_vue_type_style_index_0_lang = "";
-const _hoisted_1$4 = {
+const _hoisted_1$4 = ["aria-hidden"];
+const _hoisted_2$3 = {
   key: 0,
   class: "vc-highlights vc-day-layer"
 };
-const _hoisted_2$3 = {
+const _hoisted_3$3 = {
   key: 1,
   class: "vc-day-layer vc-day-box-center-bottom"
 };
-const _hoisted_3$3 = { class: "vc-dots" };
-const _hoisted_4$2 = {
+const _hoisted_4$2 = { class: "vc-dots" };
+const _hoisted_5$1 = {
   key: 2,
   class: "vc-day-layer vc-day-box-center-bottom"
 };
-const _hoisted_5$1 = { class: "vc-bars" };
+const _hoisted_6$1 = { class: "vc-bars" };
 function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_CalendarSlot = vue.resolveComponent("CalendarSlot");
   const _directive_popover = vue.resolveDirective("popover");
   return vue.openBlock(), vue.createElementBlock("div", {
-    class: vue.normalizeClass(_ctx.dayClasses)
+    class: vue.normalizeClass(_ctx.dayClasses),
+    "aria-hidden": !_ctx.day.inMonth
   }, [
-    _ctx.hasHighlights ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$4, [
+    _ctx.hasHighlights ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$3, [
       (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(_ctx.highlights, ({ key, wrapperClass, class: bgClass, style }) => {
         return vue.openBlock(), vue.createElementBlock("div", {
           key,
@@ -6928,8 +6930,8 @@ function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
       ]),
       _: 1
     }, 8, ["day", "attributes", "attribute-cells", "dayProps", "dayEvents", "locale"]),
-    _ctx.hasDots ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$3, [
-      vue.createElementVNode("div", _hoisted_3$3, [
+    _ctx.hasDots ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$3, [
+      vue.createElementVNode("div", _hoisted_4$2, [
         (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(_ctx.dots, ({ key, class: bgClass, style }) => {
           return vue.openBlock(), vue.createElementBlock("span", {
             key,
@@ -6939,8 +6941,8 @@ function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
         }), 128))
       ])
     ])) : vue.createCommentVNode("", true),
-    _ctx.hasBars ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_4$2, [
-      vue.createElementVNode("div", _hoisted_5$1, [
+    _ctx.hasBars ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_5$1, [
+      vue.createElementVNode("div", _hoisted_6$1, [
         (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(_ctx.bars, ({ key, class: bgClass, style }) => {
           return vue.openBlock(), vue.createElementBlock("span", {
             key,
@@ -6950,7 +6952,7 @@ function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
         }), 128))
       ])
     ])) : vue.createCommentVNode("", true)
-  ], 2);
+  ], 10, _hoisted_1$4);
 }
 const CalendarDay = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$2]]);
 const _hoisted_1$3 = {

@@ -6875,27 +6875,29 @@ const _sfc_main$7 = defineComponent({
   }
 });
 const CalendarDay_vue_vue_type_style_index_0_lang = "";
-const _hoisted_1$4 = {
+const _hoisted_1$4 = ["aria-hidden"];
+const _hoisted_2$3 = {
   key: 0,
   class: "vc-highlights vc-day-layer"
 };
-const _hoisted_2$3 = {
+const _hoisted_3$3 = {
   key: 1,
   class: "vc-day-layer vc-day-box-center-bottom"
 };
-const _hoisted_3$3 = { class: "vc-dots" };
-const _hoisted_4$2 = {
+const _hoisted_4$2 = { class: "vc-dots" };
+const _hoisted_5$1 = {
   key: 2,
   class: "vc-day-layer vc-day-box-center-bottom"
 };
-const _hoisted_5$1 = { class: "vc-bars" };
+const _hoisted_6$1 = { class: "vc-bars" };
 function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_CalendarSlot = resolveComponent("CalendarSlot");
   const _directive_popover = resolveDirective("popover");
   return openBlock(), createElementBlock("div", {
-    class: normalizeClass(_ctx.dayClasses)
+    class: normalizeClass(_ctx.dayClasses),
+    "aria-hidden": !_ctx.day.inMonth
   }, [
-    _ctx.hasHighlights ? (openBlock(), createElementBlock("div", _hoisted_1$4, [
+    _ctx.hasHighlights ? (openBlock(), createElementBlock("div", _hoisted_2$3, [
       (openBlock(true), createElementBlock(Fragment, null, renderList(_ctx.highlights, ({ key, wrapperClass, class: bgClass, style }) => {
         return openBlock(), createElementBlock("div", {
           key,
@@ -6926,8 +6928,8 @@ function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
       ]),
       _: 1
     }, 8, ["day", "attributes", "attribute-cells", "dayProps", "dayEvents", "locale"]),
-    _ctx.hasDots ? (openBlock(), createElementBlock("div", _hoisted_2$3, [
-      createElementVNode("div", _hoisted_3$3, [
+    _ctx.hasDots ? (openBlock(), createElementBlock("div", _hoisted_3$3, [
+      createElementVNode("div", _hoisted_4$2, [
         (openBlock(true), createElementBlock(Fragment, null, renderList(_ctx.dots, ({ key, class: bgClass, style }) => {
           return openBlock(), createElementBlock("span", {
             key,
@@ -6937,8 +6939,8 @@ function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
         }), 128))
       ])
     ])) : createCommentVNode("", true),
-    _ctx.hasBars ? (openBlock(), createElementBlock("div", _hoisted_4$2, [
-      createElementVNode("div", _hoisted_5$1, [
+    _ctx.hasBars ? (openBlock(), createElementBlock("div", _hoisted_5$1, [
+      createElementVNode("div", _hoisted_6$1, [
         (openBlock(true), createElementBlock(Fragment, null, renderList(_ctx.bars, ({ key, class: bgClass, style }) => {
           return openBlock(), createElementBlock("span", {
             key,
@@ -6948,7 +6950,7 @@ function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
         }), 128))
       ])
     ])) : createCommentVNode("", true)
-  ], 2);
+  ], 10, _hoisted_1$4);
 }
 const CalendarDay = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$2]]);
 const _hoisted_1$3 = {
