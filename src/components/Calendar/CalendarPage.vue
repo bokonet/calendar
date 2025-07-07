@@ -18,11 +18,13 @@
           page.weeknumberPosition,
       }"
     >
-      <div class="vc-weekdays">
+      <div class="vc-weekdays" role="row">
         <!--Weekday labels-->
         <div
           v-for="({ weekday, label }, i) in page.weekdays"
           :key="i"
+          role="columnheader"
+          :aria-colindex="i + 1"
           :class="`vc-weekday vc-weekday-${weekday}`"
         >
           {{ label }}
