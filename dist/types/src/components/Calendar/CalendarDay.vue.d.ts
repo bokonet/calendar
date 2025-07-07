@@ -28,6 +28,7 @@ declare const _default: import("vue").DefineComponent<{
         tabindex: string;
         'aria-label': string;
         'aria-hidden': boolean;
+        'aria-disabled': boolean;
     }>;
     dayContentEvents: import("vue").ComputedRef<{
         click(event: MouseEvent): void;

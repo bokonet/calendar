@@ -6820,7 +6820,8 @@ const _sfc_main$7 = vue.defineComponent({
         style,
         tabindex,
         "aria-label": day.value.ariaLabel,
-        "aria-hidden": !day.value.inMonth
+        "aria-hidden": !day.value.inMonth,
+        "aria-disabled": day.value.isDisabled
       };
     });
     const dayContentEvents = vue.computed(() => {
