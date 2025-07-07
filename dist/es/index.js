@@ -6239,7 +6239,7 @@ const _hoisted_3$5 = {
   type: "button",
   class: "vc-title"
 };
-const _hoisted_4$3 = ["disabled"];
+const _hoisted_4$4 = ["disabled"];
 const _sfc_main$b = /* @__PURE__ */ defineComponent({
   __name: "CalendarHeader",
   props: {
@@ -6393,7 +6393,7 @@ const _sfc_main$b = /* @__PURE__ */ defineComponent({
             ]),
             _: 1
           }, 8, ["disabled"])
-        ], 40, _hoisted_4$3)) : createCommentVNode("", true)
+        ], 40, _hoisted_4$4)) : createCommentVNode("", true)
       ], 6);
     };
   }
@@ -6456,7 +6456,7 @@ function usePage() {
 const _hoisted_1$5 = { class: "vc-nav-header" };
 const _hoisted_2$4 = ["disabled"];
 const _hoisted_3$4 = ["disabled"];
-const _hoisted_4$2 = { class: "vc-nav-items" };
+const _hoisted_4$3 = { class: "vc-nav-items" };
 const _hoisted_5$2 = ["data-id", "aria-label", "disabled", "onClick", "onKeydown"];
 const _sfc_main$a = /* @__PURE__ */ defineComponent({
   __name: "CalendarNav",
@@ -6655,7 +6655,7 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
             }, 8, ["disabled"])
           ], 40, _hoisted_3$4)
         ]),
-        createElementVNode("div", _hoisted_4$2, [
+        createElementVNode("div", _hoisted_4$3, [
           (openBlock(true), createElementBlock(Fragment, null, renderList(unref(activeItems), (item) => {
             return openBlock(), createElementBlock("button", {
               key: item.label,
@@ -6884,7 +6884,7 @@ const _hoisted_2$3 = {
   class: "vc-day-layer vc-day-box-center-bottom"
 };
 const _hoisted_3$3 = { class: "vc-dots" };
-const _hoisted_4$1 = {
+const _hoisted_4$2 = {
   key: 2,
   class: "vc-day-layer vc-day-box-center-bottom"
 };
@@ -6937,7 +6937,7 @@ function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
         }), 128))
       ])
     ])) : createCommentVNode("", true),
-    _ctx.hasBars ? (openBlock(), createElementBlock("div", _hoisted_4$1, [
+    _ctx.hasBars ? (openBlock(), createElementBlock("div", _hoisted_4$2, [
       createElementVNode("div", _hoisted_5$1, [
         (openBlock(true), createElementBlock(Fragment, null, renderList(_ctx.bars, ({ key, class: bgClass, style }) => {
           return openBlock(), createElementBlock("span", {
@@ -6951,9 +6951,13 @@ function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
   ], 2);
 }
 const CalendarDay = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$2]]);
-const _hoisted_1$3 = { class: "vc-weekdays" };
-const _hoisted_2$2 = ["aria-rowindex"];
-const _hoisted_3$2 = ["onClick"];
+const _hoisted_1$3 = {
+  class: "vc-weekdays",
+  role: "row"
+};
+const _hoisted_2$2 = ["aria-colindex"];
+const _hoisted_3$2 = ["aria-rowindex"];
+const _hoisted_4$1 = ["onClick"];
 const __default__$2 = {
   inheritAttrs: false
 };
@@ -6989,8 +6993,10 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
             (openBlock(true), createElementBlock(Fragment, null, renderList(unref(page).weekdays, ({ weekday, label }, i) => {
               return openBlock(), createElementBlock("div", {
                 key: i,
+                role: "columnheader",
+                "aria-colindex": i + 1,
                 class: normalizeClass(`vc-weekday vc-weekday-${weekday}`)
-              }, toDisplayString(label), 3);
+              }, toDisplayString(label), 11, _hoisted_2$2);
             }), 128))
           ]),
           (openBlock(true), createElementBlock(Fragment, null, renderList(unref(page).viewWeeks, (week, i) => {
@@ -7007,7 +7013,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
                 createElementVNode("span", {
                   class: normalizeClass(["vc-weeknumber-content"]),
                   onClick: ($event) => unref(onWeeknumberClick)(week, $event)
-                }, toDisplayString(week.weeknumberDisplay), 9, _hoisted_3$2)
+                }, toDisplayString(week.weeknumberDisplay), 9, _hoisted_4$1)
               ], 2)) : createCommentVNode("", true),
               (openBlock(true), createElementBlock(Fragment, null, renderList(week.days, (day, j) => {
                 return openBlock(), createBlock(CalendarDay, {
@@ -7017,7 +7023,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
                   role: "gridcell"
                 }, null, 8, ["day", "aria-colindex"]);
               }), 128))
-            ], 8, _hoisted_2$2);
+            ], 8, _hoisted_3$2);
           }), 128))
         ], 2)
       ], 2);

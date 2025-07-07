@@ -6241,7 +6241,7 @@ const _hoisted_3$5 = {
   type: "button",
   class: "vc-title"
 };
-const _hoisted_4$3 = ["disabled"];
+const _hoisted_4$4 = ["disabled"];
 const _sfc_main$b = /* @__PURE__ */ vue.defineComponent({
   __name: "CalendarHeader",
   props: {
@@ -6395,7 +6395,7 @@ const _sfc_main$b = /* @__PURE__ */ vue.defineComponent({
             ]),
             _: 1
           }, 8, ["disabled"])
-        ], 40, _hoisted_4$3)) : vue.createCommentVNode("", true)
+        ], 40, _hoisted_4$4)) : vue.createCommentVNode("", true)
       ], 6);
     };
   }
@@ -6458,7 +6458,7 @@ function usePage() {
 const _hoisted_1$5 = { class: "vc-nav-header" };
 const _hoisted_2$4 = ["disabled"];
 const _hoisted_3$4 = ["disabled"];
-const _hoisted_4$2 = { class: "vc-nav-items" };
+const _hoisted_4$3 = { class: "vc-nav-items" };
 const _hoisted_5$2 = ["data-id", "aria-label", "disabled", "onClick", "onKeydown"];
 const _sfc_main$a = /* @__PURE__ */ vue.defineComponent({
   __name: "CalendarNav",
@@ -6657,7 +6657,7 @@ const _sfc_main$a = /* @__PURE__ */ vue.defineComponent({
             }, 8, ["disabled"])
           ], 40, _hoisted_3$4)
         ]),
-        vue.createElementVNode("div", _hoisted_4$2, [
+        vue.createElementVNode("div", _hoisted_4$3, [
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(vue.unref(activeItems), (item) => {
             return vue.openBlock(), vue.createElementBlock("button", {
               key: item.label,
@@ -6886,7 +6886,7 @@ const _hoisted_2$3 = {
   class: "vc-day-layer vc-day-box-center-bottom"
 };
 const _hoisted_3$3 = { class: "vc-dots" };
-const _hoisted_4$1 = {
+const _hoisted_4$2 = {
   key: 2,
   class: "vc-day-layer vc-day-box-center-bottom"
 };
@@ -6939,7 +6939,7 @@ function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
         }), 128))
       ])
     ])) : vue.createCommentVNode("", true),
-    _ctx.hasBars ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_4$1, [
+    _ctx.hasBars ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_4$2, [
       vue.createElementVNode("div", _hoisted_5$1, [
         (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(_ctx.bars, ({ key, class: bgClass, style }) => {
           return vue.openBlock(), vue.createElementBlock("span", {
@@ -6953,9 +6953,13 @@ function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
   ], 2);
 }
 const CalendarDay = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$2]]);
-const _hoisted_1$3 = { class: "vc-weekdays" };
-const _hoisted_2$2 = ["aria-rowindex"];
-const _hoisted_3$2 = ["onClick"];
+const _hoisted_1$3 = {
+  class: "vc-weekdays",
+  role: "row"
+};
+const _hoisted_2$2 = ["aria-colindex"];
+const _hoisted_3$2 = ["aria-rowindex"];
+const _hoisted_4$1 = ["onClick"];
 const __default__$2 = {
   inheritAttrs: false
 };
@@ -6991,8 +6995,10 @@ const _sfc_main$6 = /* @__PURE__ */ vue.defineComponent({
             (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(vue.unref(page).weekdays, ({ weekday, label }, i) => {
               return vue.openBlock(), vue.createElementBlock("div", {
                 key: i,
+                role: "columnheader",
+                "aria-colindex": i + 1,
                 class: vue.normalizeClass(`vc-weekday vc-weekday-${weekday}`)
-              }, vue.toDisplayString(label), 3);
+              }, vue.toDisplayString(label), 11, _hoisted_2$2);
             }), 128))
           ]),
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(vue.unref(page).viewWeeks, (week, i) => {
@@ -7009,7 +7015,7 @@ const _sfc_main$6 = /* @__PURE__ */ vue.defineComponent({
                 vue.createElementVNode("span", {
                   class: vue.normalizeClass(["vc-weeknumber-content"]),
                   onClick: ($event) => vue.unref(onWeeknumberClick)(week, $event)
-                }, vue.toDisplayString(week.weeknumberDisplay), 9, _hoisted_3$2)
+                }, vue.toDisplayString(week.weeknumberDisplay), 9, _hoisted_4$1)
               ], 2)) : vue.createCommentVNode("", true),
               (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(week.days, (day, j) => {
                 return vue.openBlock(), vue.createBlock(CalendarDay, {
@@ -7019,7 +7025,7 @@ const _sfc_main$6 = /* @__PURE__ */ vue.defineComponent({
                   role: "gridcell"
                 }, null, 8, ["day", "aria-colindex"]);
               }), 128))
-            ], 8, _hoisted_2$2);
+            ], 8, _hoisted_3$2);
           }), 128))
         ], 2)
       ], 2);
