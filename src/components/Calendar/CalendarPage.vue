@@ -25,6 +25,7 @@
           :key="i"
           role="columnheader"
           :aria-colindex="i + 1"
+          :aria-label="label"
           :class="`vc-weekday vc-weekday-${weekday}`"
         >
           {{ label }}
