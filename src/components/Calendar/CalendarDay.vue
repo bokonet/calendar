@@ -178,6 +178,7 @@ export default defineComponent({
         tabindex,
         'aria-label': day.value.ariaLabel,
         'aria-hidden': !day.value.inMonth,
+        'aria-disabled': day.value.isDisabled,
       };
     });
 
