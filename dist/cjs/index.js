@@ -6957,7 +6957,7 @@ const _hoisted_1$3 = {
   class: "vc-weekdays",
   role: "row"
 };
-const _hoisted_2$2 = ["aria-colindex"];
+const _hoisted_2$2 = ["aria-colindex", "aria-label"];
 const _hoisted_3$2 = ["aria-rowindex"];
 const _hoisted_4$1 = ["onClick"];
 const __default__$2 = {
@@ -6997,6 +6997,7 @@ const _sfc_main$6 = /* @__PURE__ */ vue.defineComponent({
                 key: i,
                 role: "columnheader",
                 "aria-colindex": i + 1,
+                "aria-label": label,
                 class: vue.normalizeClass(`vc-weekday vc-weekday-${weekday}`)
               }, vue.toDisplayString(label), 11, _hoisted_2$2);
             }), 128))
