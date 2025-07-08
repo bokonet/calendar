@@ -6988,7 +6988,6 @@ const _sfc_main$6 = /* @__PURE__ */ vue.defineComponent({
           "hide-arrows": ""
         }, null, 8, ["page"]),
         vue.createElementVNode("div", {
-          role: "grid",
           class: vue.normalizeClass(["vc-weeks", {
             [`vc-show-weeknumbers-${vue.unref(page).weeknumberPosition}`]: vue.unref(page).weeknumberPosition
           }])

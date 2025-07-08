@@ -11,7 +11,6 @@
   >
     <CalendarHeader :page="page" is-lg hide-arrows />
     <div
-      role="grid"
       class="vc-weeks"
       :class="{
         [`vc-show-weeknumbers-${page.weeknumberPosition}`]:
