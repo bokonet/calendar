@@ -33,7 +33,7 @@
       </div>
       <!--Weeks-->
       <div
-        v-for="(week, i) in page.viewWeeks"
+        v-for="(week, i) in visibleWeeks"
         :key="`weeknumber-${week.weeknumber}`"
         class="vc-week"
         role="row"
@@ -64,6 +64,7 @@ export default {
 </script>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 import CalendarDay from './CalendarDay.vue';
 import CalendarHeader from './CalendarHeader.vue';
 import { useCalendar } from '../../use/calendar';
@@ -71,6 +72,17 @@ import { usePage } from '../../use/page';
 
 const { page } = usePage();
 const { onWeeknumberClick } = useCalendar();
+
+interface Day {
+  inMonth: boolean;
+  id: string;
+}
+
+const visibleWeeks = computed(() =>
+  page.value.viewWeeks.filter((week: { days: Day[] }) =>
+    week.days.some((day) => day.inMonth)
+  )
+);
 </script>
 
 <style lang="css">

@@ -6971,6 +6971,11 @@ const _sfc_main$6 = /* @__PURE__ */ vue.defineComponent({
   setup(__props) {
     const { page } = usePage();
     const { onWeeknumberClick } = useCalendar();
+    const visibleWeeks = vue.computed(
+      () => page.value.viewWeeks.filter(
+        (week) => week.days.some((day) => day.inMonth)
+      )
+    );
     return (_ctx, _cache) => {
       return vue.openBlock(), vue.createElementBlock("div", {
         class: vue.normalizeClass([
@@ -7004,7 +7009,7 @@ const _sfc_main$6 = /* @__PURE__ */ vue.defineComponent({
               }, vue.toDisplayString(label), 11, _hoisted_2$2);
             }), 128))
           ]),
-          (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(vue.unref(page).viewWeeks, (week, i) => {
+          (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(vue.unref(visibleWeeks), (week, i) => {
             return vue.openBlock(), vue.createElementBlock("div", {
               key: `weeknumber-${week.weeknumber}`,
               class: "vc-week",

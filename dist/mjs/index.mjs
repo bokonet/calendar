@@ -6969,6 +6969,11 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
   setup(__props) {
     const { page } = usePage();
     const { onWeeknumberClick } = useCalendar();
+    const visibleWeeks = computed(
+      () => page.value.viewWeeks.filter(
+        (week) => week.days.some((day) => day.inMonth)
+      )
+    );
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", {
         class: normalizeClass([
@@ -7002,7 +7007,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
               }, toDisplayString(label), 11, _hoisted_2$2);
             }), 128))
           ]),
-          (openBlock(true), createElementBlock(Fragment, null, renderList(unref(page).viewWeeks, (week, i) => {
+          (openBlock(true), createElementBlock(Fragment, null, renderList(unref(visibleWeeks), (week, i) => {
             return openBlock(), createElementBlock("div", {
               key: `weeknumber-${week.weeknumber}`,
               class: "vc-week",
