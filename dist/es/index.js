@@ -6986,6 +6986,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
           "hide-arrows": ""
         }, null, 8, ["page"]),
         createElementVNode("div", {
+          role: "grid",
           class: normalizeClass(["vc-weeks", {
             [`vc-show-weeknumbers-${unref(page).weeknumberPosition}`]: unref(page).weeknumberPosition
           }])
