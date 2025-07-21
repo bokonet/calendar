@@ -6875,12 +6875,12 @@ const _sfc_main$7 = defineComponent({
   }
 });
 const CalendarDay_vue_vue_type_style_index_0_lang = "";
-const _hoisted_1$4 = ["aria-hidden"];
+const _hoisted_1$4 = ["aria-hidden", "inert"];
 const _hoisted_2$3 = {
   key: 0,
   class: "vc-highlights vc-day-layer"
 };
-const _hoisted_3$3 = ["inert"];
+const _hoisted_3$3 = ["inert", "disabled"];
 const _hoisted_4$2 = {
   key: 1,
   class: "vc-day-layer vc-day-box-center-bottom"
@@ -6896,7 +6896,8 @@ function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
   const _directive_popover = resolveDirective("popover");
   return openBlock(), createElementBlock("div", {
     class: normalizeClass(_ctx.dayClasses),
-    "aria-hidden": !_ctx.day.inMonth
+    "aria-hidden": !_ctx.day.inMonth,
+    inert: _ctx.day.isDisabled || !_ctx.day.inMonth
   }, [
     _ctx.hasHighlights ? (openBlock(), createElementBlock("div", _hoisted_2$3, [
       (openBlock(true), createElementBlock(Fragment, null, renderList(_ctx.highlights, ({ key, wrapperClass, class: bgClass, style }) => {
@@ -6922,7 +6923,8 @@ function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
     }, {
       default: withCtx(() => [
         withDirectives((openBlock(), createElementBlock("button", mergeProps(_ctx.dayContentProps, toHandlers(_ctx.dayContentEvents, true), {
-          inert: _ctx.day.isDisabled || !_ctx.day.inMonth
+          inert: _ctx.day.isDisabled || !_ctx.day.inMonth,
+          disabled: _ctx.day.isDisabled || !_ctx.day.inMonth
         }), [
           createTextVNode(toDisplayString(_ctx.day.label), 1)
         ], 16, _hoisted_3$3)), [

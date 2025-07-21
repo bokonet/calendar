@@ -1,5 +1,5 @@
 <template>
-  <div :class="dayClasses" :aria-hidden="!day.inMonth">
+  <div :class="dayClasses" :aria-hidden="!day.inMonth" v-bind:inert="day.isDisabled || !day.inMonth">
     <!--Highlights-->
     <div v-if="hasHighlights" class="vc-highlights vc-day-layer">
       <div
@@ -25,6 +25,7 @@
         v-on="dayContentEvents"
         v-popover="dayPopover"
         v-bind:inert="day.isDisabled || !day.inMonth"
+        v-bind:disabled="day.isDisabled || !day.inMonth"
       >
         {{ day.label }}
       </button>
