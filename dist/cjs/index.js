@@ -6882,16 +6882,17 @@ const _hoisted_2$3 = {
   key: 0,
   class: "vc-highlights vc-day-layer"
 };
-const _hoisted_3$3 = {
+const _hoisted_3$3 = ["inert"];
+const _hoisted_4$2 = {
   key: 1,
   class: "vc-day-layer vc-day-box-center-bottom"
 };
-const _hoisted_4$2 = { class: "vc-dots" };
-const _hoisted_5$1 = {
+const _hoisted_5$1 = { class: "vc-dots" };
+const _hoisted_6$1 = {
   key: 2,
   class: "vc-day-layer vc-day-box-center-bottom"
 };
-const _hoisted_6$1 = { class: "vc-bars" };
+const _hoisted_7$1 = { class: "vc-bars" };
 function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_CalendarSlot = vue.resolveComponent("CalendarSlot");
   const _directive_popover = vue.resolveDirective("popover");
@@ -6922,16 +6923,18 @@ function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
       locale: _ctx.locale
     }, {
       default: vue.withCtx(() => [
-        vue.withDirectives((vue.openBlock(), vue.createElementBlock("button", vue.mergeProps(_ctx.dayContentProps, vue.toHandlers(_ctx.dayContentEvents, true)), [
+        vue.withDirectives((vue.openBlock(), vue.createElementBlock("button", vue.mergeProps(_ctx.dayContentProps, vue.toHandlers(_ctx.dayContentEvents, true), {
+          inert: _ctx.day.isDisabled || !_ctx.day.inMonth
+        }), [
           vue.createTextVNode(vue.toDisplayString(_ctx.day.label), 1)
-        ], 16)), [
+        ], 16, _hoisted_3$3)), [
           [_directive_popover, _ctx.dayPopover]
         ])
       ]),
       _: 1
     }, 8, ["day", "attributes", "attribute-cells", "dayProps", "dayEvents", "locale"]),
-    _ctx.hasDots ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$3, [
-      vue.createElementVNode("div", _hoisted_4$2, [
+    _ctx.hasDots ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_4$2, [
+      vue.createElementVNode("div", _hoisted_5$1, [
         (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(_ctx.dots, ({ key, class: bgClass, style }) => {
           return vue.openBlock(), vue.createElementBlock("span", {
             key,
@@ -6941,8 +6944,8 @@ function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
         }), 128))
       ])
     ])) : vue.createCommentVNode("", true),
-    _ctx.hasBars ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_5$1, [
-      vue.createElementVNode("div", _hoisted_6$1, [
+    _ctx.hasBars ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_6$1, [
+      vue.createElementVNode("div", _hoisted_7$1, [
         (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(_ctx.bars, ({ key, class: bgClass, style }) => {
           return vue.openBlock(), vue.createElementBlock("span", {
             key,

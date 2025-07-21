@@ -20,11 +20,12 @@
       :dayEvents="dayContentEvents"
       :locale="locale"
     >
-      <button
+     <button
         v-bind="dayContentProps"
         v-on="dayContentEvents"
         v-popover="dayPopover"
-      >    
+        v-bind:inert="day.isDisabled || !day.inMonth"
+      >
         {{ day.label }}
       </button>
     </CalendarSlot>
